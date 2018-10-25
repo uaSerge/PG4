@@ -85,4 +85,8 @@
         sumCartField.set("v.value",sum);
     },
 
+    submit: function (component, event, helper) {
+
+    }
+
 })
