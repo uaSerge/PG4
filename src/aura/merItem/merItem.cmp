@@ -3,7 +3,7 @@
  -->
 
 <aura:component description="merItem" implements="forceCommunity:availableForAllPageTypes" access="global">
-    <aura:registerEvent name = "addItemCart" type="c:changeMerchEvent"/>
+    <aura:registerEvent name="addItemCart" type="c:changeMerchEvent"/>
     <aura:attribute name='item' type='Merchandise__c' required='true'/>
     <lightning:card title="{!v.item.Name}" iconName="standard:scan_card">
 
@@ -16,19 +16,23 @@
         <p>Description : {!v.item.Description__c},
         </p>
         <p>
-            Price: <lightning:formattedNumber  value="{!v.item.Price__c}" style="currency"/>
+            Price:
+            <lightning:formattedNumber value="{!v.item.Price__c}" style="currency"/>
         </p>
         <p>
-            Quantity: <lightning:formattedNumber  value="{!v.item.Quantity__c}"/>
+            Quantity:
+            <lightning:formattedNumber value="{!v.item.Quantity__c}"/>
 
-            <lightning:input aura:id="quantityBuy" type="number" name="myNumber"
-                             label="Quantity to buy:" value="1" />
-
+            <lightning:input type="number" name="myNumber"  formatter="number" aura:id="quantityBuy"
+                             min="1" step="1" max="{!v.item.Quantity__c}"
+                             messageWhenRangeOverflow="We don't have enouph quantity of products"
+                             messageWhenRangeUnderflow="Enter an amount that's at least 1."
+                             label="Quantity to buy:" value="1"/>
         </p>
         <div>
             <lightning:button label="Add to cart !!!"
                               onclick="{!c.toCart}"
-                              disabled="false"/><!--onclick="{!c.packItem}" -->
+                              disabled="false"/>
         </div>
     </lightning:card>
 

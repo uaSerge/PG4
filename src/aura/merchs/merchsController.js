@@ -86,7 +86,25 @@
     },
 
     submit: function (component, event, helper) {
-
-    }
-
+           var action = component.get("c.createInvoice");
+        action.setParams({
+            "merchandises": component.get("v.merchsBuy")
+        });
+           // Add callback behavior for when response is received
+           action.setCallback(this, function (response) {
+               var state = response.getState();
+               if (state === "SUCCESS") {
+                   component.set("v.merchsBuy", []);
+                   console.log("state: " + response.getState());
+                   var sum = helper.sumFunction(component);
+                   var sumCartField = component.find("sumCart");
+                   sumCartField.set("v.value", sum);
+               }
+               else {
+                   console.log("Failed with state: " + state);
+               }
+           });
+           // Send action off to be executed
+           $A.enqueueAction(action);
+    },
 })

@@ -2,7 +2,7 @@
  * Created by Serhii on 08.10.2018.
  */
 
-trigger ActivityDataExtension on Account (after insert, after update, after delete, after undelete) {
+trigger TerritoryDataExtension on Account (after insert, after update, after delete, after undelete) {
 
 
     if (Trigger.isAfter) {

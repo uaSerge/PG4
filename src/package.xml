@@ -134,7 +134,7 @@
         <name>ApexPage</name>
     </types>
     <types>
-        <members>ActivityDataExtension</members>
+        <members>TerritoryDataExtension</members>
         <members>CloudNewsTrigger</members>
         <members>OrderEventTrigger</members>
         <members>PushNotificationTrigger</members>
@@ -295,6 +295,8 @@
         <members>Merchandise__c.Invoice_Line_Item_Total__c</members>
         <members>Merchandise__c.Price__c</members>
         <members>Merchandise__c.Quantity__c</members>
+        <members>Merchandise__c.Picture__c</members>
+        <members>Merchandise__c.Category__c</members>
         <members>Metric.OrigMetricId__c</members>
         <members>Opportunity.CurrentGenerators__c</members>
         <members>Opportunity.DeliveryInstallationStatus__c</members>

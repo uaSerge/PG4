@@ -128,6 +128,10 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Email" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="ExpensesController" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
@@ -260,6 +264,10 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="MerchController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="MyProfilePageController" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
@@ -329,10 +337,6 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="SlackOpportunityPublisherTest" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="MerchController" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
@@ -545,11 +549,11 @@
                       <option name="entries">
                         <list>
                           <MetadataEntry>
-                            <option name="name" value="ActivityDataExtension" />
+                            <option name="name" value="CloudNewsTrigger" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="CloudNewsTrigger" />
+                            <option name="name" value="MerchQuan" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -562,6 +566,10 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="RejectDuplicateFavorite" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="TerritoryDataExtension" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
@@ -678,6 +686,10 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="MyToken" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="PictureCarousel" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
@@ -778,6 +790,18 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="changeMerchEvent" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="changeMerchandises" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="defaultTokens" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="expenseForm" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
@@ -810,6 +834,34 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="merItem" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="merItemBuy" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="merchApp" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="merchList" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="merchListBuy" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="merchs" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="myTheme" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="selfRegister" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
@@ -822,43 +874,7 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="myTheme" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="MyToken" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="verticalNav" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="merchs" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="merItem" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="merchList" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="merchApp" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="changeMerchandises" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="merItemBuy" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="merchListBuy" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
@@ -983,7 +999,16 @@
                       <option name="entries">
                         <list>
                           <MetadataEntry>
+                            <option name="name" value="Buttons_0000_Shop1" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="dreamhouselogosquare" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="logo" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="salesonelogo" />
                           </MetadataEntry>
                         </list>
                       </option>
@@ -1337,11 +1362,19 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
+                            <option name="name" value="Merchandise__c.Category__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
                             <option name="name" value="Merchandise__c.Description__c" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Merchandise__c.Invoice_Line_Item_Total__c" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Merchandise__c.Picture__c" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
@@ -1876,14 +1909,6 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="WorkThanks" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="Goal" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="Metric" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
@@ -2528,6 +2553,13 @@
                       <option name="wildcard" value="false" />
                     </MetadataType>
                     <MetadataType>
+                      <option name="entries">
+                        <list>
+                          <MetadataEntry>
+                            <option name="name" value="customers" />
+                          </MetadataEntry>
+                        </list>
+                      </option>
                       <option name="name" value="Group" />
                       <option name="wildcard" value="false" />
                     </MetadataType>
@@ -2628,6 +2660,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="CaseClose-Close Case Layout" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="CollaborationGroup-Group Layout" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="CommunityMemberLayout-Community Member Layout" />
@@ -3222,6 +3257,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Cross Org Data Proxy User" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Custom Community User" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Custom%3A Marketing Profile" />
@@ -4176,6 +4214,9 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Case.UpsellCrosssellOpportunity" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="Invoice__c.Delete_all" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="Opportunity.DeliveryStatus" />

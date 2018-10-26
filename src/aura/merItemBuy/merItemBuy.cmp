@@ -19,8 +19,8 @@
         <lightning:formattedNumber value="{!v.item.Price__c}" style="currency"/>
     </p>
     <p>
-        <!--lightning:formattedNumber value="{!v.item.Quantity__c}"/-->
-        <lightning:input type="number" name="myNumber"
+        <lightning:input type="number" name="myNumber" aura:id="quantityBuyTwo"
+                         min="1" step="1" messageWhenRangeUnderflow="Enter an amount that's at least 1."
                          label="Quantity:" value="{!v.item.Quantity__c}"  onchange="{!c.changeSum}"/>
     </p>
     <div>
