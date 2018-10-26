@@ -34,31 +34,33 @@
                     :
                     <lightning:formattedNumber aura:id="sumQuantity" value=""/>
                 </p>
+
                 <c:merchList items="{!v.merchs}"/>
-                <p></p>
+
             </lightning:layoutItem>
 
 
-            <form>
-                <lightning:layoutItem padding="around-small" size="12">
-                    <lightning:card title="Shopping Cart" iconName="standard:scan_card">
+            <lightning:layoutItem padding="around-small" size="6">
+                <lightning:card title="Shopping Cart" iconName="standard:scan_card">
+                    <form>
+
                         <c:merchListBuy items="{!v.merchsBuy}"/>
-                        <p></p>
-                    </lightning:card>
-                </lightning:layoutItem>
-                <p>
-                    TOTAL PRICE:
-                    <lightning:formattedNumber aura:id="sumCart" value="0" style="currency"/>
-                </p>
 
-                <lightning:button label="BUY!!!"
-                                  onclick="{!c.submit}"
-                                  disabled="false"/>
-                <lightning:button label="CLEAR"
-                                  onclick="{!c.clear}"
-                                  disabled="false"/>
-            </form>
-
+                        <div>
+                            <ui:outputText class="slds-p-horizontal--small" value="TOTAL PRICE:"/>
+                            <lightning:formattedNumber aura:id="sumCart" value="0" style="currency"/>
+                        </div>
+                        <div class="slds-p-horizontal--small">
+                            <lightning:button label="BUY!!!"
+                                              onclick="{!c.submit}"
+                                              disabled="false"/>
+                            <lightning:button label="CLEAR"
+                                              onclick="{!c.clear}"
+                                              disabled="false"/>
+                        </div>
+                    </form>
+                </lightning:card>
+            </lightning:layoutItem>
         </lightning:layout>
     </form>
 </aura:component>
