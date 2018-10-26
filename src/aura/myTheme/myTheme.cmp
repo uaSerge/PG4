@@ -27,8 +27,6 @@
         </div>
         <div class="slds-col content">
             {!v.body}
-            <!--c:merchs merchandises="{!v.merchandises}"/-->
-
         </div>
     </div>
 </aura:component>

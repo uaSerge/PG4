@@ -4,7 +4,7 @@
 ({
     doInit2: function(component, category, variable){
         var action = component.get(category);
-        // Add callback behavior for when response is received
+
         action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {

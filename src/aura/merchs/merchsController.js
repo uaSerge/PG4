@@ -5,28 +5,28 @@
     doInit: function (component, event, helper) {
         helper.doInit2(component, "c.getMerchandises", "v.merchs");
         var sumCartField = component.find("categoryName");
-        sumCartField.set("v.value"," \'ALL\' ");
+        sumCartField.set("v.value", " \'ALL\' ");
     },
 
     changeMerchNotes: function (component, event, helper) {
         helper.doInit2(component, "c.getNotes", "v.merchs");
         var sumCartField = component.find("categoryName");
-        sumCartField.set("v.value"," \'Notebooks\' ");
+        sumCartField.set("v.value", " \'Notebooks\' ");
     },
     changeMerchMons: function (component, event, helper) {
         helper.doInit2(component, "c.getMons", "v.merchs");
         var sumCartField = component.find("categoryName");
-        sumCartField.set("v.value"," \'Monitors\' ");
+        sumCartField.set("v.value", " \'Monitors\' ");
     },
     changeMerchKes: function (component, event, helper) {
         helper.doInit2(component, "c.getKes", "v.merchs");
         var sumCartField = component.find("categoryName");
-        sumCartField.set("v.value"," \'Keyboards\' ");
+        sumCartField.set("v.value", " \'Keyboards\' ");
     },
     changeMerchMouses: function (component, event, helper) {
         helper.doInit2(component, "c.getMouses", "v.merchs");
         var sumCartField = component.find("categoryName");
-        sumCartField.set("v.value"," \'Mouses\' ");
+        sumCartField.set("v.value", " \'Mouses\' ");
     },
 
     addCart: function (component, event, helper) {
@@ -47,13 +47,13 @@
         console.log("Buy1 " + newItems);
         var sum = helper.sumFunction(component);
         var sumCartField = component.find("sumCart");
-        sumCartField.set("v.value",sum);
+        sumCartField.set("v.value", sum);
     },
 
     editCart: function (component, event, helper) {
         var sum = helper.sumFunction(component);
         var sumCartField = component.find("sumCart");
-        sumCartField.set("v.value",sum);
+        sumCartField.set("v.value", sum);
     },
 
     dellCart: function (component, event, helper) {
@@ -75,36 +75,36 @@
         component.set("v.merchsBuy", newItems);
         var sum = helper.sumFunction(component);
         var sumCartField = component.find("sumCart");
-        sumCartField.set("v.value",sum);
+        sumCartField.set("v.value", sum);
     },
 
     clear: function (component, event, helper) {
-        var newItems = component.set("v.merchsBuy",[]);
+        var newItems = component.set("v.merchsBuy", []);
         var sum = helper.sumFunction(component);
         var sumCartField = component.find("sumCart");
-        sumCartField.set("v.value",sum);
+        sumCartField.set("v.value", sum);
     },
 
     submit: function (component, event, helper) {
-           var action = component.get("c.createInvoice");
+        var action = component.get("c.createInvoice");
         action.setParams({
             "merchandises": component.get("v.merchsBuy")
         });
-           // Add callback behavior for when response is received
-           action.setCallback(this, function (response) {
-               var state = response.getState();
-               if (state === "SUCCESS") {
-                   component.set("v.merchsBuy", []);
-                   console.log("state: " + response.getState());
-                   var sum = helper.sumFunction(component);
-                   var sumCartField = component.find("sumCart");
-                   sumCartField.set("v.value", sum);
-               }
-               else {
-                   console.log("Failed with state: " + state);
-               }
-           });
-           // Send action off to be executed
-           $A.enqueueAction(action);
+
+        action.setCallback(this, function (response) {
+            var state = response.getState();
+            if (state === "SUCCESS") {
+                component.set("v.merchsBuy", []);
+                console.log("state: " + response.getState());
+                var sum = helper.sumFunction(component);
+                var sumCartField = component.find("sumCart");
+                sumCartField.set("v.value", sum);
+            }
+            else {
+                alert("Enter correct amount of products.");
+            }
+        });
+        // Send action off to be executed
+        $A.enqueueAction(action);
     },
 })

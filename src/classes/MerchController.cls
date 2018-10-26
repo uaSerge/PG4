@@ -2,7 +2,7 @@
  * Created by Serhii on 24.10.2018.
  */
 
-public without sharing class MerchController {
+public with sharing class MerchController {
 
     @AuraEnabled
     public static List<Merchandise__c> getMerchandises() {
@@ -19,15 +19,11 @@ public without sharing class MerchController {
                 throw new System.NoAccessException();
             }
         }
-// OK, they're cool, let 'em through
         return [
                 SELECT Id, Name, Picture__c, Category__c, Description__c,
                         Price__c, Quantity__c
                 FROM Merchandise__c
         ];
-
-//        String categoryString = 'Quantity__c>0';
-        //      return getCategory(categoryString);
     }
 
     @AuraEnabled
@@ -59,10 +55,8 @@ public without sharing class MerchController {
                 'Id', 'Name', 'Picture__c', 'Category__c', 'Description__c',
                 'Price__c', 'Quantity__c'
         };
-
         Map<String, Schema.SObjectField> fieldDescribeTokens =
                 Schema.SObjectType.Merchandise__c.fields.getMap();
-
         for (String field : fieldsToCheck) {
             if (!fieldDescribeTokens.get(field).getDescribe().isAccessible()) {
                 throw new System.NoAccessException();
@@ -76,27 +70,23 @@ public without sharing class MerchController {
         ];
     }
     @AuraEnabled
-    public static List <Invoice__c> createInvoice(List <Merchandise__c> merchandises) {
-        //  List <Invoice__c> invoices = new List<Invoice__c>();
+    public static void createInvoice(List <Merchandise__c> merchandises) {
         if (merchandises.size() > 0) {
             Invoice__c inv = new Invoice__c(Status__c = 'Open');
             insert inv;
-            System.debug('Invoice__c id' + Invoice__c.id);
+            System.debug('Invoice__c id ' + inv.id);
             List <Invoice_Line_Item__c> lineItems = new List<Invoice_Line_Item__c>();
             for (Merchandise__c merch : merchandises) {
                 if (merch.Quantity__c > 0 && merch.Quantity__c != null) {
                     Invoice_Line_Item__c item = new Invoice_Line_Item__c(Invoice__c = inv.id,
                             Merchandise__c = merch.id, Quantity__c = merch.Quantity__c, Unit_Price__c = merch.Price__c);
                     lineItems.add(item);
+                    System.debug('Invoice_Line_Item__c' + item);
                 }
             }
             insert lineItems;
             upsert inv;
-            return [SELECT Id, Name FROM Invoice__c WHERE Id = :inv.Id];
         }
-        return null;//????
-
-
     }
 }
 

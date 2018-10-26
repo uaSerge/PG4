@@ -4,7 +4,6 @@
 
 <aura:component controller="MerchController" implements="forceCommunity:availableForAllPageTypes" access="global">
     <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
-    <!--aura:registerEvent name="changeMerch" type="c:changeMerchEvent" action="{!c.handleAddItem}/-->
     <aura:handler name="addItemCart" event="c:changeMerchEvent"
                   action="{!c.addCart}"/>
     <aura:handler name="editItemCart" event="c:changeMerchEvent"

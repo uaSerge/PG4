@@ -2,7 +2,7 @@
  * Created by Serhii on 24.10.2018.
  */
 ({
-    doInit: function(component, event, helper) {
+  /*  doInit: function(component, event, helper) {
         // Create the action
         var action = component.get("c.getMerchandises");
         // Add callback behavior for when response is received
@@ -18,5 +18,5 @@
         });
         // Send action off to be executed
         $A.enqueueAction(action);
-    },
+    },*/
 })
